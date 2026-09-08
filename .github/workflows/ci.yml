@@ -23,7 +23,9 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer install --prefer-dist --no-progress --no-suggest --no-audit
+        env:
+          COMPOSER_NO_AUDIT: 1
 
       - name: Run tests
         run: composer test
@@ -43,7 +45,9 @@ jobs:
           extensions: mbstring, xml, ctype, json
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer install --prefer-dist --no-progress --no-suggest --no-audit
+        env:
+          COMPOSER_NO_AUDIT: 1
 
       - name: Run PHP CodeSniffer
         run: composer lint
