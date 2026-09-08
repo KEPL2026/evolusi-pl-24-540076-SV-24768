@@ -1,27 +1,27 @@
 # Todo API - Evolusi Perangkat Lunak
 
-Simple Laravel-based Todo API demonstrating Git workflow, CI/CD, and software evolution principles.
+Simple Laravel-based Todo API for demonstrating Git workflow, CI/CD, and software evolution principles.
 
-## 🎯 Features
+## Features
 
-- ✅ CRUD operations for todos
-- ✅ Input validation (title: 3-100 chars, description: required, max 500 chars)
-- ✅ RESTful API design
-- ✅ Automated testing with PHPUnit
-- ✅ Code quality checks with PHP CodeSniffer
-- ✅ CI/CD with GitHub Actions
+- CRUD operations for todos
+- Input validation (title: 3-100 characters, description: required, max 500 characters)
+- RESTful API design
+- Automated testing with PHPUnit
+- Code quality checks with PHP CodeSniffer
+- CI/CD integration with GitHub Actions
 
-## 📡 API Endpoints
+## API Endpoints
 
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| GET | `/api/todos` | Get all todos |
-| POST | `/api/todos` | Create new todo |
-| GET | `/api/todos/{id}` | Get specific todo |
-| PUT | `/api/todos/{id}` | Update todo |
-| DELETE | `/api/todos/{id}` | Delete todo |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/todos | Get all todos |
+| POST | /api/todos | Create new todo |
+| GET | /api/todos/{id} | Get specific todo |
+| PUT | /api/todos/{id} | Update todo |
+| DELETE | /api/todos/{id} | Delete todo |
 
-## 📋 Request/Response Examples
+## Request/Response Examples
 
 ### Create Todo (POST /api/todos)
 **Request:**
@@ -62,7 +62,7 @@ Simple Laravel-based Todo API demonstrating Git workflow, CI/CD, and software ev
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Install dependencies
@@ -75,12 +75,12 @@ composer test
 composer lint
 ```
 
-## 🔍 Validation Rules
+## Validation Rules
 
-- **Title**: Required, minimum 3 characters, maximum 100 characters
-- **Description**: Required, maximum 500 characters
+- Title: Required, minimum 3 characters, maximum 100 characters
+- Description: Required, maximum 500 characters
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 evolusi-pl-24-540076-SV-24768/
@@ -108,19 +108,19 @@ evolusi-pl-24-540076-SV-24768/
 └── README.md
 ```
 
-## 👤 Author
+## Author
 
-- **NIM**: 24-540076-SV-24768
-- **Assignment**: Evolusi Perangkat Lunak (EPL)
+NIM: 24-540076-SV-24768
+Assignment: Evolusi Perangkat Lunak (EPL)
 
-## 📚 Technologies Used
+## Technologies Used
 
 - PHP 8.1+
 - Laravel Framework 10.x
-- PHPUnit 10.x (Testing)
-- PHP CodeSniffer 3.7+ (Code Quality)
-- GitHub Actions (CI/CD)
+- PHPUnit 10.x
+- PHP CodeSniffer 3.7+
+- GitHub Actions
 
-## 📝 License
+## License
 
-Academic Project - Universitas (Nama Universitas)
+Academic Project - Universitas Gadjah Mada
