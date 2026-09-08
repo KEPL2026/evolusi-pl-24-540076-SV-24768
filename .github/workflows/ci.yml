@@ -23,10 +23,10 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        run: composer update --no-audit --no-interaction --prefer-dist
+        run: composer install --no-interaction --prefer-dist
         env:
           COMPOSER_NO_AUDIT: 1
-          COMPOSER_NO_INTERACTION: 1
+          COMPOSER_NO_DEV: 0
 
       - name: Run tests
         run: composer test
@@ -46,10 +46,10 @@ jobs:
           extensions: mbstring, xml, ctype, json
 
       - name: Install dependencies
-        run: composer update --no-audit --no-interaction --prefer-dist
+        run: composer install --no-interaction --prefer-dist
         env:
           COMPOSER_NO_AUDIT: 1
-          COMPOSER_NO_INTERACTION: 1
+          COMPOSER_NO_DEV: 0
 
       - name: Run PHP CodeSniffer
         run: composer lint
