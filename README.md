@@ -2,36 +2,125 @@
 
 Simple Laravel-based Todo API demonstrating Git workflow, CI/CD, and software evolution principles.
 
-## Features
-- CRUD operations for todos
-- RESTful API design
-- Automated testing with PHPUnit
-- Code quality checks with PHP CodeSniffer
-- CI/CD with GitHub Actions
+## 🎯 Features
 
-## API Endpoints
-- `GET /api/todos` - List all todos
-- `POST /api/todos` - Create new todo
-- `GET /api/todos/{id}` - Get specific todo
-- `PUT /api/todos/{id}` - Update todo
-- `DELETE /api/todos/{id}` - Delete todo
+- ✅ CRUD operations for todos
+- ✅ Input validation (title: 3-100 chars, description: required, max 500 chars)
+- ✅ RESTful API design
+- ✅ Automated testing with PHPUnit
+- ✅ Code quality checks with PHP CodeSniffer
+- ✅ CI/CD with GitHub Actions
 
-## Installation
-```bash
-composer install
-php artisan serve
+## 📡 API Endpoints
+
+| Method | Endpoint | Deskripsi |
+|--------|----------|-----------|
+| GET | `/api/todos` | Get all todos |
+| POST | `/api/todos` | Create new todo |
+| GET | `/api/todos/{id}` | Get specific todo |
+| PUT | `/api/todos/{id}` | Update todo |
+| DELETE | `/api/todos/{id}` | Delete todo |
+
+## 📋 Request/Response Examples
+
+### Create Todo (POST /api/todos)
+**Request:**
+```json
+{
+  "title": "Buy groceries",
+  "description": "Buy milk, eggs, and bread"
+}
 ```
 
-## Testing
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "id": 1,
+    "title": "Buy groceries",
+    "description": "Buy milk, eggs, and bread",
+    "completed": false
+  }
+}
+```
+
+### List Todos (GET /api/todos)
+**Response:**
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "title": "Buy groceries",
+      "description": "Buy milk, eggs, and bread",
+      "completed": false
+    }
+  ]
+}
+```
+
+## 🧪 Testing
+
 ```bash
+# Install dependencies
+composer install
+
+# Run all tests
 composer test
+
+# Run code quality checks
 composer lint
 ```
 
-## CI/CD
-Automated workflows run on every push:
-- Unit & Feature tests
-- Code style validation
+## 🔍 Validation Rules
 
-## Author
-NIM: 24-540076-SV-24768
+- **Title**: Required, minimum 3 characters, maximum 100 characters
+- **Description**: Required, maximum 500 characters
+
+## 🏗️ Project Structure
+
+```
+evolusi-pl-24-540076-SV-24768/
+├── app/
+│   ├── Models/
+│   │   └── Todo.php
+│   ├── Http/
+│   │   └── Controllers/
+│   │       └── TodoController.php
+│   └── Validators/
+│       └── TodoValidator.php
+├── routes/
+│   └── api.php
+├── tests/
+│   ├── Unit/
+│   │   ├── TodoTest.php
+│   │   └── TodoValidatorTest.php
+│   └── Feature/
+│       └── TodoControllerTest.php
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── composer.json
+├── phpunit.xml
+└── README.md
+```
+
+## 👤 Author
+
+- **NIM**: 24-540076-SV-24768
+- **Assignment**: Evolusi Perangkat Lunak (EPL)
+
+## 📚 Technologies Used
+
+- PHP 8.1+
+- Laravel Framework 10.x
+- PHPUnit 10.x (Testing)
+- PHP CodeSniffer 3.7+ (Code Quality)
+- GitHub Actions (CI/CD)
+
+## 📝 License
+
+Academic Project - Universitas (Nama Universitas)
