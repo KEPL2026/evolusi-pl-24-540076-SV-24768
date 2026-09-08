@@ -23,7 +23,7 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest --no-audit
+        run: composer install --prefer-dist --no-progress --no-suggest
         env:
           COMPOSER_NO_AUDIT: 1
 
@@ -45,7 +45,7 @@ jobs:
           extensions: mbstring, xml, ctype, json
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest --no-audit
+        run: composer install --prefer-dist --no-progress --no-suggest
         env:
           COMPOSER_NO_AUDIT: 1
 
